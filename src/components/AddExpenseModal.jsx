@@ -40,7 +40,7 @@ export default function AddExpenseModal({show, handleClose, defaultBudgetId }) {
                     <Form.Control ref={amountRef} type="number" required min={0} setp={0.01}/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="budgetId">
-                    <Form.Label>Harcama kalemi</Form.Label>
+                    <Form.Label>Harcama Kalemi Seç</Form.Label>
                     <Form.Select defaultValue={defaultBudgetId} ref={budgetIdRef}>
                         <option id={UNCATEGORISED_BUDGET_ID}>Diger</option>
                         {budgets.map(budget => (

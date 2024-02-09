@@ -41,7 +41,7 @@ export default function EditExpenseModal({show, handleClose, defaultBudgetId, ed
             </Modal.Header>
             <Modal.Body>
                 <Form.Group className="mb-3" controlId="description">
-                    <Form.Label>Aciklama</Form.Label>
+                    <Form.Label>Harcama ismi</Form.Label>
                     <Form.Control ref={descriptionRef} type="text" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="amount">

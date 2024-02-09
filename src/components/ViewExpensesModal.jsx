@@ -17,7 +17,7 @@ export default function ViewExpensesModal({ budgetId, openEdit, openEditExpense,
 
     const expenses = getBudgetExpenses(realBudgetId)
     const budget = 
-        UNCATEGORISED_BUDGET_ID === budgetId ? {name: 'Diger', id: UNCATEGORISED_BUDGET_ID}
+        UNCATEGORISED_BUDGET_ID === budgetId ? {name: 'Uncategorised', id: UNCATEGORISED_BUDGET_ID}
         : budgets.find(b => b._id === budgetId)
 
   return (
