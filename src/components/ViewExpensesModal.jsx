@@ -24,7 +24,7 @@ export default function ViewExpensesModal({ budgetId, openEdit, openEditExpense,
     <Modal show={budgetId !== null } onHide={handleClose}>
         <Modal.Header closeButton>
             <Modal.Title>
-            <div>Expenses - {budget?.name}</div>
+            <div>Harcamalar - {budget?.name}</div>
             </Modal.Title>
         </Modal.Header>
             <Modal.Body>
@@ -49,13 +49,13 @@ export default function ViewExpensesModal({ budgetId, openEdit, openEditExpense,
                         <Button variant="outline-danger" onClick={() => {
                             handleClose()
                             openEdit(budget._id)                      
-                        }}>Edit Budget</Button>
+                        }}>Bütçeyi güncelle</Button>
                     )}
                     {budgetId !== UNCATEGORISED_BUDGET_ID && (
                         <Button variant="outline-danger" onClick={() => {
                             deleteBudget(budget._id)
                             handleClose()
-                        }}>Delete</Button>
+                        }}>Sil</Button>
                     )}
             
             </Modal.Footer>

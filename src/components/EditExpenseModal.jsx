@@ -37,19 +37,19 @@ export default function EditExpenseModal({show, handleClose, defaultBudgetId, ed
     <Modal show={show} onHide={handleClose}>
         <Form onSubmit={handleSubmit}>
             <Modal.Header closeButton>
-                <Modal.Title>Update Expense</Modal.Title>
+                <Modal.Title>Harcamayi güncelle</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form.Group className="mb-3" controlId="description">
-                    <Form.Label>Description</Form.Label>
+                    <Form.Label>Aciklama</Form.Label>
                     <Form.Control ref={descriptionRef} type="text" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="amount">
-                    <Form.Label>Amount</Form.Label>
+                    <Form.Label>Miktar</Form.Label>
                     <Form.Control ref={amountRef} type="number" required min={0} setp={0.01}/>
                 </Form.Group>
                 <Modal.Footer>
-                    <Button variant="primary" type="submit">Add</Button>
+                    <Button variant="primary" type="submit">Ekle</Button>
                 </Modal.Footer>
             </Modal.Body>
         </Form>

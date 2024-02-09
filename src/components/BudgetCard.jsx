@@ -30,8 +30,8 @@ export default function BudgetCard({ name, amount, max, gray, onAddExpenseClick,
             </Card.Title>
             {max && <ProgressBar className="rounded-pill" variant={getProgressBarVariant(amount, max)} min={0} max={max} now={amount} />}
             {!hideButtons&& <Stack direction="horizontal" gap="2" className="mt-4">
-                <Button variant="outline-primary" className="ms-auto" onClick={onAddExpenseClick}>Add Expense</Button>
-                <Button variant="outline-secondary" onClick={onViewExpensesClick}>View Expenses</Button>
+                <Button variant="outline-primary" className="ms-auto" onClick={onAddExpenseClick}>Harcama ekle</Button>
+                <Button variant="outline-secondary" onClick={onViewExpensesClick}>Harcamalari görüntüle</Button>
             </Stack>}
         </Card.Body>
     </Card>

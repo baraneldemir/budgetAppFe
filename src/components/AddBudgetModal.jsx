@@ -22,20 +22,20 @@ export default function AddBudgetModal({show, handleClose}) {
     <Modal show={show} onHide={handleClose}>
         <Form onSubmit={handleSubmit}>
             <Modal.Header closeButton>
-                <Modal.Title>New Budget</Modal.Title>
+                <Modal.Title>Yeni bütçe</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form.Group className="mb-3" controlId="name">
-                    <Form.Label>Name</Form.Label>
+                    <Form.Label>Isim</Form.Label>
                     <Form.Control ref={nameRef} type="text" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="name">
-                    <Form.Label>Maximum Spending</Form.Label>
+                    <Form.Label>Maximum Bütçe</Form.Label>
                     <Form.Control ref={maxRef} type="number" required min={0} step={0.01} />
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-                    <Button variant="primary" type="submit">Add</Button>
+                    <Button variant="primary" type="submit">Ekle</Button>
                 </Modal.Footer>
         </Form>
     </Modal>

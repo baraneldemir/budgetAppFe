@@ -28,21 +28,21 @@ export default function AddExpenseModal({show, handleClose, defaultBudgetId }) {
     <Modal show={show} onHide={handleClose}>
         <Form onSubmit={handleSubmit}>
             <Modal.Header closeButton>
-                <Modal.Title>New Expense</Modal.Title>
+                <Modal.Title>Yeni Harcama</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form.Group className="mb-3" controlId="description">
-                    <Form.Label>Description</Form.Label>
+                    <Form.Label>Açiklama</Form.Label>
                     <Form.Control ref={descriptionRef} type="text" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="amount">
-                    <Form.Label>Amount</Form.Label>
+                    <Form.Label>Miktar</Form.Label>
                     <Form.Control ref={amountRef} type="number" required min={0} setp={0.01}/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="budgetId">
-                    <Form.Label>Budget</Form.Label>
+                    <Form.Label>Bütçe</Form.Label>
                     <Form.Select defaultValue={defaultBudgetId} ref={budgetIdRef}>
-                        <option id={UNCATEGORISED_BUDGET_ID}>Uncategorised</option>
+                        <option id={UNCATEGORISED_BUDGET_ID}>Kategorisiz Bütçe</option>
                         {budgets.map(budget => (
                             <option key={budget._id} value={budget._id}>
                                 {budget.name}
@@ -52,7 +52,7 @@ export default function AddExpenseModal({show, handleClose, defaultBudgetId }) {
                     </Form.Select>
                 </Form.Group>
                 <Modal.Footer>
-                    <Button variant="primary" type="submit">Add</Button>
+                    <Button variant="primary" type="submit">Ekle</Button>
                 </Modal.Footer>
             </Modal.Body>
         </Form>
