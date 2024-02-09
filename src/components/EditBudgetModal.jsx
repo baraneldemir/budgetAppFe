@@ -52,4 +52,3 @@ export default function EditBudgetModal({show, handleClose, editingBudgetId,}) {
     </Modal>
   )
 }
-

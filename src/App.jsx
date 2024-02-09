@@ -50,8 +50,9 @@ function App() {
           <Container className='my-4'>
             <Stack direction="horizontal" gap="2" className="mb-4">
               <h1 className='me-auto'>Hesap Kitap</h1>
-              <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}>Harcama kalemi ekle</Button>
-              <Button variant='outline-primary' onClick={() => setShowAddExpenseModal(true)}>Harcama ekle</Button>
+              <h5 className='me-auto'>Diger kategorisini lutfen silmeyin. Uygulamamiz cokmektedir :/</h5>
+              <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}>Harcama Kalemi Ekle</Button>
+              <Button variant='outline-primary' onClick={() => setShowAddExpenseModal(true)}>Harcama Ekle</Button>
             </Stack>
             <div style={{
               display: "grid",
@@ -61,7 +62,7 @@ function App() {
               }}
             >
               {budgets.map( budget => {
-                if(budget.name !== "Diger") {
+                if(budget.name !== "Uncategorised") {
                 const exp = getBudgetExpenses(budget._id)
                 const amount = exp ? exp.reduce((total, e) => total + e.amount, 0) : 0
                 return(
@@ -109,16 +110,3 @@ function App() {
       );
     }
     export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-

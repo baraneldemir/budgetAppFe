@@ -110,4 +110,3 @@ export const BudgetsProvider = ({children}) => {
         </BudgetContext.Provider>
     )
 }
-
