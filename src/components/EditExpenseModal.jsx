@@ -1,13 +1,12 @@
 import { Button, Form, Modal } from "react-bootstrap"
 import { useEffect, useRef } from "react"
-import { useBudgets, UNCATEGORISED_BUDGET_ID } from "../context/BudgetContext"
+import { useBudgets, } from "../context/BudgetContext"
 
 export default function EditExpenseModal({show, handleClose, defaultBudgetId, editingExpenseId }) {
     const descriptionRef = useRef()
     const amountRef = useRef()
-    const budgetIdRef = useRef()
     //use budgets hook allows access to budgets so we can map
-    const { expenses, budgets, updateExpense, getBudgets, getExpenses } = useBudgets()
+    const { expenses, updateExpense, getBudgets, getExpenses } = useBudgets()
 
 
     useEffect(() => {
