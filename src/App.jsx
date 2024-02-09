@@ -61,7 +61,7 @@ function App() {
               }}
             >
               {budgets.map( budget => {
-                if(budget.name !== "Uncategorised") {
+                if(budget.name !== "Kategorisiz Bütçe") {
                 const exp = getBudgetExpenses(budget._id)
                 const amount = exp ? exp.reduce((total, e) => total + e.amount, 0) : 0
                 return(

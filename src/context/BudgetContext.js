@@ -3,7 +3,7 @@ import axios from "axios"
 
 const BudgetContext = createContext()
 
-export const UNCATEGORISED_BUDGET_ID = 'Uncategorised' 
+export const UNCATEGORISED_BUDGET_ID = 'Diger' 
 
 export function useBudgets() {
     return useContext(BudgetContext)

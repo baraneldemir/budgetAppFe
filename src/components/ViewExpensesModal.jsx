@@ -17,7 +17,7 @@ export default function ViewExpensesModal({ budgetId, openEdit, openEditExpense,
 
     const expenses = getBudgetExpenses(realBudgetId)
     const budget = 
-        UNCATEGORISED_BUDGET_ID === budgetId ? {name: 'Uncategorised', id: UNCATEGORISED_BUDGET_ID}
+        UNCATEGORISED_BUDGET_ID === budgetId ? {name: 'Diger', id: UNCATEGORISED_BUDGET_ID}
         : budgets.find(b => b._id === budgetId)
 
   return (
@@ -49,13 +49,13 @@ export default function ViewExpensesModal({ budgetId, openEdit, openEditExpense,
                         <Button variant="outline-danger" onClick={() => {
                             handleClose()
                             openEdit(budget._id)                      
-                        }}>Bütçeyi güncelle</Button>
+                        }}>Güncelle</Button>
                     )}
                     {budgetId !== UNCATEGORISED_BUDGET_ID && (
                         <Button variant="outline-danger" onClick={() => {
                             deleteBudget(budget._id)
                             handleClose()
-                        }}>Sil</Button>
+                        }}>Harcama kalemini sil</Button>
                     )}
             
             </Modal.Footer>
